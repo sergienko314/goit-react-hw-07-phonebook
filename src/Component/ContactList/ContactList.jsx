@@ -17,14 +17,13 @@ const ContactList = () => {
       
       return contacts.filter(
         ({ name, phone }) =>
-          name.includes(filter)||
-          phone.includes(filter)
+          name.toLowerCase().includes(filter)||
+          phone.toLowerCase().includes(filter)
       );
     }
   };
 
   const contactList = renderContacts()
-  console.log(contactList);
 
   return (
     <ul>
